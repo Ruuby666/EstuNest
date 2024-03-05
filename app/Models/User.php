@@ -2,44 +2,53 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class User extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
+        'dni',
         'name',
         'email',
         'password',
+        'phone',
+        'type',
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-    ];
+    public function properties()
+    {
+        return $this->hasMany(Property::class, 'dni_landlord', 'dni');
+    }
+
+    public function rents()
+    {
+        return $this->hasMany(Rent::class);
+    }
+
+    public function scopeLandlords($query)
+    {
+        return $query->where('type', 'landlord');
+    }
+
+    public function scopeTenants($query)
+    {
+        return $query->where('type', 'tenant');
+    }
+
+    public function scopeWithRent($query)
+    {
+        return $query->with('rents');
+    }
+
+    public function scopeWithProperty($query)
+    {
+        return $query->with('properties');
+    }
+
+
+
 }
