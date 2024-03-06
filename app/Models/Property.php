@@ -18,9 +18,9 @@ class Property extends Model
         'dni_landlord',
     ];
 
-    // Relación con la tabla "alquila"
-    public function rent()
+    public function landlord()
     {
-        return $this->hasMany(Rent::class, 'id_property');
+        return $this->belongsTo(User::class, 'dni_landlord', 'dni');
     }
 }
+
