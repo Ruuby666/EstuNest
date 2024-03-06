@@ -12,6 +12,7 @@ class User extends Model
     protected $fillable = [
         'dni',
         'name',
+        'surname',
         'email',
         'password',
         'phone',
@@ -24,31 +25,7 @@ class User extends Model
         return $this->hasMany(Property::class, 'dni_landlord', 'dni');
     }
 
-    public function rents()
-    {
-        return $this->hasMany(Rent::class);
-    }
-
-    public function scopeLandlords($query)
-    {
-        return $query->where('type', 'landlord');
-    }
-
-    public function scopeTenants($query)
-    {
-        return $query->where('type', 'tenant');
-    }
-
-    public function scopeWithRent($query)
-    {
-        return $query->with('rents');
-    }
-
-    public function scopeWithProperty($query)
-    {
-        return $query->with('properties');
-    }
-
+    
 
 
 }

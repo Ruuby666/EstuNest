@@ -16,7 +16,7 @@ return new class extends Migration
             $table->integer('rooms_available');
             $table->decimal('price', 10, 2);
             $table->string('address');
-            $table->string('description');
+            $table->text('description');
             $table->string('city');
             $table->string('dni_landlord');
             $table->timestamps();
