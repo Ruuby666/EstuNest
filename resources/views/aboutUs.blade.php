@@ -3,5 +3,5 @@
 @section('title', 'EstuNest')
 
 @section('content')
-<p>Contenido de la página principal</p>
+<p>Contenido sobre nosotros</p>
 @endsection

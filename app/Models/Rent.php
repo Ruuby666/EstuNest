@@ -10,21 +10,26 @@ class Rent extends Model
     use HasFactory;
 
     protected $fillable = [
-        'dni_tenant',
-        'id_property',
+        'property_id',
+        'user_id',
         'start_date',
         'end_date',
+        'price',
+        'status',
     ];
 
-    // Relación con la tabla "users" (inquilino)
-    public function tenant()
-    {
-        return $this->belongsTo(User::class, 'dni_tenant', 'dni');
-    }
-
-    // Relación con la tabla "properties"
     public function property()
     {
-        return $this->belongsTo(Property::class, 'id_property');
+        return $this->belongsTo(Property::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
+
+
+
 }
