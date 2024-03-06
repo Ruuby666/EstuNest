@@ -3,5 +3,7 @@
 @section('title', 'EstuNest')
 
 @section('content')
-<p>Contenido de la página principal</p>
+
+@include('components.cardProperty', ['properties' => $properties])
+
 @endsection
