@@ -17,3 +17,6 @@ Route::get('/', function () {
     return view('mainPage');
 });
 
+Route::get('/about', function () {
+    return view('aboutUs');
+})->name('aboutUs');
