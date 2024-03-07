@@ -1,6 +1,6 @@
 @foreach ($properties as $property)
     <div class="card">
-        <img src="..." class="card-img-top" alt="Property Image">
+
         <div class="card-body">
             <h5 class="card-title">{{ $property->title }}</h5>
             <p class="card-text">{{ $property->description }}</p>
