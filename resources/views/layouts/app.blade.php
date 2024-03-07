@@ -13,10 +13,10 @@
             <div class="header">
                 <a href="{{route('mainPage')}}"><div id="logo"><img src="/img/logo.png" alt="logo EstuNest"></div></a>
                 <div id="menu">
-                    <span><a href="{{ route('catalog')}}"></a>Catálogo</span>
-                    <span><a href="{{ route('aboutUs') }}"></a>Sobre Nosotros</span>
-                    <span><a href="{{ route('signUp')}}"></a>Sign Up</span>
-                    <span><a href="{{ route('logIn')}}"></a>Log In</span>
+                    <a href="{{ route('catalog')}}"><span>Catálogo</span></a>
+                    <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
+                    <a href="{{ route('signUp')}}"><span>Sign Up</span></a>
+                    <a href="{{ route('logIn')}}"><span>Log In</span></a>
                 </div>
             </div>
         </div>
