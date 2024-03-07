@@ -1,14 +1,23 @@
-@foreach ($properties as $property)
-    <div class="card">
-        <img src="/img/logo.png" class="card-img-top" alt="Property Image">
-        <div class="card-body">
-            {{-- <h5 class="card-title">{{ $property->title }}</h5> --}}
-            <p class="card-text">{{ $property->description }}</p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Price: ${{ $property->price }}</li>
-                <!-- Add more property details as needed -->
-            </ul>
-            {{-- <a href="{{ route('property.show', $property->id) }}" class="btn btn-primary">View Details</a> --}}
+<div class="property-container">
+    @foreach ($properties as $property)
+        <div class="property-item">
+            <div class="article-wrapper">
+                <figure>
+                    <img src="/img/logo.png" alt="" />
+                </figure>
+                <div class="article-body">
+                    <h2>{{$property->address}}</h2>
+                    <p>
+                        {{$property->price}} €
+                    </p>
+                    <a href="#" class="read-more">
+                        Detalles
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-@endforeach
+    @endforeach
+</div>
