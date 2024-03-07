@@ -11,12 +11,12 @@
     @section('header')
         <div class="container">
             <div class="header">
-                <div id="logo"><img src="/img/logo.png" alt="logo EstuNest"></div>
+                <a href="{{route('mainPage')}}"><div id="logo"><img src="/img/logo.png" alt="logo EstuNest"></div></a>
                 <div id="menu">
-                    <span>Catálogo</span>
+                    <a href="{{ route('catalog')}}"><span>Catálogo</span></a>
                     <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
-                    <span>Register</span>
-                    <span>Login</span>
+                    <a href="{{ route('register')}}"><span>Register</span></a>
+                    <a href="{{ route('logIn')}}"><span>Login</span></a>
                 </div>
             </div>
         </div>

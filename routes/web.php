@@ -19,3 +19,15 @@ Route::get('/', [PropertyController::class, 'index'])->name('mainPage');
 Route::get('/about', function () {
     return view('aboutUs');
 })->name('aboutUs');
+
+Route::get('/catalog', function () {
+    return view('catalogo');
+})->name('catalog');
+
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
+
+Route::get('/login', function () {
+    return view('logIn');
+})->name('logIn');
