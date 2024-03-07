@@ -12,7 +12,6 @@ class PropertyController extends Controller
     public function index()
     {
         $properties = DB::select('select * from properties');
-        return view('mainPage', ['properties' => $properties]);
-        
+        return view('catalogo', ['properties' => $properties]);
     }
 }

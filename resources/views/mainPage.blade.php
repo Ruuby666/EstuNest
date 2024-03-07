@@ -4,6 +4,6 @@
 
 @section('content')
 
-@include('components.cardProperty', ['properties' => $properties])
+
 
 @endsection

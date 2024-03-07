@@ -14,15 +14,16 @@ use App\Http\Controllers\PropertyController;
 |
 */
 
-Route::get('/', [PropertyController::class, 'index'])->name('mainPage');
+Route::get('/', function() {
+    return view('mainPage');
+
+})->name('mainPage');
 
 Route::get('/about', function () {
     return view('aboutUs');
 })->name('aboutUs');
 
-Route::get('/catalog', function () {
-    return view('catalogo');
-})->name('catalog');
+Route::get('/catalog', [PropertyController::class, 'index'])->name('catalog');
 
 Route::get('/signup', function () {
     return view('signUp');
