@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
     <title>@yield('title')</title>
 </head>
 <body class="site">
@@ -15,8 +16,8 @@
                 <div id="menu">
                     <a href="{{ route('catalog')}}"><span>Catálogo</span></a>
                     <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
-                    <a href="{{ route('register')}}"><span>Register</span></a>
-                    <a href="{{ route('logIn')}}"><span>Login</span></a>
+                    <a href="{{ route('signUp')}}"><span>Sign Up</span></a>
+                    <a href="{{ route('logIn')}}"><span>Log In</span></a>
                 </div>
             </div>
         </div>
@@ -27,7 +28,7 @@
     </div>
 
     @section('footer')
-        <div class="container">
+        <div class="container-footer">
             <div class="footer">
                 <p>EstuNest 2024</p>
             </div>

@@ -24,9 +24,9 @@ Route::get('/catalog', function () {
     return view('catalogo');
 })->name('catalog');
 
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+Route::get('/signup', function () {
+    return view('signUp');
+})->name('signUp');
 
 Route::get('/login', function () {
     return view('logIn');

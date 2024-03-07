@@ -13,5 +13,6 @@ class PropertyController extends Controller
     {
         $properties = DB::select('select * from properties');
         return view('mainPage', ['properties' => $properties]);
+        
     }
 }
