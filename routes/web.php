@@ -16,7 +16,6 @@ use App\Http\Controllers\PropertyController;
 
 Route::get('/', function() {
     return view('mainPage');
-
 })->name('mainPage');
 
 Route::get('/about', function () {
@@ -25,10 +24,12 @@ Route::get('/about', function () {
 
 Route::get('/catalog', [PropertyController::class, 'index'])->name('catalog');
 
-Route::get('/signup', function () {
+Route::get('/signUp', function () {
     return view('signUp');
 })->name('signUp');
 
 Route::get('/login', function () {
     return view('logIn');
 })->name('logIn');
+
+Route::get('/property/{id}', [PropertyController::class, 'show'])->name('property');

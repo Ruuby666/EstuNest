@@ -14,4 +14,10 @@ class PropertyController extends Controller
         $properties = DB::select('select * from properties');
         return view('catalogo', ['properties' => $properties]);
     }
+
+    public function show($id)
+    {
+        $property = DB::select('select * from properties where id = ?', [$id]);
+        return view('propertyDetails', ['property' => $property]);
+    }
 }
