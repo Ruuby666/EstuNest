@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="{{ asset('css/register.css') }}">
 <div class="signUp-content">
     <div class="div-signUp-form">
         <h2 class="form-title">Sign up</h2>

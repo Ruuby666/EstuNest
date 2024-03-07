@@ -1,3 +1,5 @@
+
+<link rel="stylesheet" href="{{ asset('css/filter.css') }}">
 @extends('layouts.app')
 
 @section('title', 'EstuNest')

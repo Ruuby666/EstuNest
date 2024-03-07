@@ -1,7 +1,6 @@
 #catalogFilter {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     max-width: 80%;
     margin: 50px auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
