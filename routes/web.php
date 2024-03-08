@@ -14,9 +14,7 @@ use App\Http\Controllers\PropertyController;
 |
 */
 
-Route::get('/', function() {
-    return view('mainPage');
-})->name('mainPage');
+Route::get('/', [PropertyController::class, 'recomendaciones'])->name('mainPage');
 
 Route::get('/about', function () {
     return view('aboutUs');
