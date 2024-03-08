@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use App\Http\Controllers\PropertyController;
 |
 */
 
-Route::get('/', function() {
+Route::get('/', function () {
     return view('mainPage');
 })->name('mainPage');
 
@@ -24,12 +26,18 @@ Route::get('/about', function () {
 
 Route::get('/catalog', [PropertyController::class, 'index'])->name('catalog');
 
-Route::get('/signUp', function () {
+Route::get('/signup', function () {
     return view('signUp');
 })->name('signUp');
+
+Route::post('/signup', [UserController::class, 'register'])->name('signup.create');
+
 
 Route::get('/login', function () {
     return view('logIn');
 })->name('logIn');
+
+Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
+
 
 Route::get('/property/{id}', [PropertyController::class, 'show'])->name('property');

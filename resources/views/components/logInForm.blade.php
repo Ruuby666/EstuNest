@@ -1,9 +1,14 @@
 
+@if (Auth::check())
+    <p>Bienvenido, {{ Auth::user()->name }}</p>
+@endif
+
 <link rel="stylesheet" href="{{ asset('css/register.css') }}">
 <div class="logIn-content">
     <div class="div-signUp-form">
         <h2 class="form-title">Log in</h2>
-        <form class="signUp-form" id="signUp-form">
+        <form class="signUp-form" id="signUp-form" action="{{ route('login.submit') }}" method="POST">
+            @csrf
             <div class="form-group">
                 <input type="text" name="dni" id="dni" placeholder="Your Dni">
             </div>

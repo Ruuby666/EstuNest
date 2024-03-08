@@ -4,5 +4,8 @@
 
 @section('content')
 
-
 @endsection
+
+@if (session('message'))
+        <p>{{ session('message') }}</p>
+@endif
