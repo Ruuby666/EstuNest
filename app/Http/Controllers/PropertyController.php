@@ -15,6 +15,11 @@ class PropertyController extends Controller
         return view('catalogo', ['properties' => $properties]);
     }
 
+    public function recomendaciones() {
+        $properties = Property::take(3)->get();
+        return view('mainPage', ['properties' => $properties]);
+    }
+
     public function show($id)
     {
         $property = DB::select('select * from properties where id = ?', [$id]);

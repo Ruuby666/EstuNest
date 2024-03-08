@@ -16,9 +16,7 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('mainPage');
-})->name('mainPage');
+Route::get('/', [PropertyController::class, 'recomendaciones'])->name('mainPage');
 
 Route::get('/about', function () {
     return view('aboutUs');
