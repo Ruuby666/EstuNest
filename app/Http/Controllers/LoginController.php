@@ -16,11 +16,11 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         // Obtener el DNI y la contraseña del formulario
-        $dni = $request->input('dni');
+        $email = $request->input('email');
         $password = $request->input('pass');
 
         // Buscar al usuario por su DNI
-        $user = User::where('dni', $dni)->first();
+        $user = User::where('email', $email)->first();
 
         // Verificar si el usuario existe y si la contraseña coincide
         if ($user && $user->password == $password) {
