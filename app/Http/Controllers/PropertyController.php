@@ -25,4 +25,9 @@ class PropertyController extends Controller
         $property = DB::select('select * from properties where id = ?', [$id]);
         return view('propertyDetails', ['property' => $property]);
     }
+
+    public function create()
+    {
+        return view('propertyCreation');
+    }
 }

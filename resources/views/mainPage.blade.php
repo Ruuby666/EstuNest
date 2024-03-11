@@ -22,7 +22,7 @@
 <div class="recomendaciones">
     <h2 class="mainPageTitle">Recomendaciones Diarias</h2>
     <div class="property">
-        @include('components.recomendations', ['properties' => $properties])
+        @include('components.cardProperty', ['properties' => $properties])
     </div>
 </div>
 

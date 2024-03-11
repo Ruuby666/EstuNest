@@ -19,7 +19,7 @@ h2 {
     padding: 0;
     font-weight: 700;
     color: #222;
-    font-size: 36px
+    font-size: 36px;
 }
 
 .site-content{
@@ -51,7 +51,7 @@ h2 {
     transform: translate(-50%,-50%);
 }
 
-.signUp-content {
+.propertyCreation {
     padding: 65px;
     display: flex;
     border-radius: 35px;
@@ -62,12 +62,12 @@ h2 {
     align-items: center;
 }
 
-.div-signUp-form,.signUp-image,.signin-form,.signin-image {
+.div-propertyCreation-form,.image,.propertyCreation-form {
     width: 50%;
     overflow: hidden
 }
 
-.signUp-image {
+.image {
     margin: 0 55px
 }
 
@@ -75,7 +75,7 @@ h2 {
     margin-bottom: 33px
 }
 
-.signUp-image {
+.image {
     margin-top: 45px;
     margin-bottom: 50px;
     text-align: center;
@@ -99,27 +99,15 @@ h2 {
     color: rgb(40, 40, 40);
     border-bottom: 0 !important;
 }
-.signUp-image-link {
-    font-size: 14px;
-    color: #222;
-    display: block;
-    text-align: center;
-    text-decoration: underline;
 
-}
 
-.term-service {
-    font-size: 13px;
-    color: #222
-}
-
-.div-signUp-form {
+.div-propertyCreation-form {
     margin-left: 75px;
     margin-right: 75px;
     padding-left: 34px
 }
 
-.signUp-form {
+.propertyCreation-form {
     width: 100%
 }
 
@@ -151,22 +139,6 @@ input:hover {
     border-bottom: 1px solid #222
 }
 
-
-.signin-content {
-    padding-top: 67px;
-    padding-bottom: 87px
-}
-
-.signin-form {
-    margin-right: 90px;
-    margin-left: 80px
-}
-
-.signin-image {
-    margin-left: 110px;
-    margin-right: 20px;
-    margin-top: 10px
-}
 
 .logIn-content{
     padding: 75px;
