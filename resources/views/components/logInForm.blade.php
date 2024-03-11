@@ -10,7 +10,7 @@
         <form class="signUp-form" id="signUp-form" action="{{ route('login.submit') }}" method="POST">
             @csrf
             <div class="form-group">
-                <input type="text" name="dni" id="dni" placeholder="Your Dni">
+                <input type="text" name="email" id="email" placeholder="Your Email">
             </div>
             <div class="form-group">
                 <input type="password" name="pass" id="pass" placeholder="Password">
