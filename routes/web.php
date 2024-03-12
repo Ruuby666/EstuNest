@@ -37,11 +37,16 @@ Route::get('/login', function () {
 
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
-
 Route::get('/property/{id}', [PropertyController::class, 'show'])->name('property');
-
-Route::get('/create', [PropertyController::class, 'create'])->name('create');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/userDeatils', [UserController::class, 'show'])->name('userDetails');
+Route::get('/userDetails', [PropertyController::class, 'create'])->name('userDetails');
+
+Route::post('/userDetails', [PropertyController::class, 'register'])->name('property.create');
+
+Route::get('/userProperties', [UserController::class, 'viewMyProperties'])->name('userProperties');
+
+
+// Route::get('/userDetails/{id}/edit', 'PropertyController@edit')->name('property.edit');
+Route::delete('/userProperties/{id}', [PropertyController::class, 'destroy'])->name('property.delete');

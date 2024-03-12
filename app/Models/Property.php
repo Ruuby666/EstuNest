@@ -15,6 +15,7 @@ class Property extends Model
         'price',
         'city',
         'address',
+        'images',
         'dni_landlord',
     ];
 

@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
             $table->integer('rooms_available');
-            $table->decimal('price', 10, 2);
-            $table->string('address');
             $table->text('description');
+            $table->decimal('price', 10);
             $table->string('city');
+            $table->string('address');
+            $table->string('images', 255)->nullable();
             $table->string('dni_landlord');
             $table->timestamps();
 

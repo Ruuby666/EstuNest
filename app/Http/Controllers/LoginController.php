@@ -26,12 +26,12 @@ class LoginController extends Controller
         // Verificar si el usuario existe y si la contraseña coincide
         if ($user && $user->password == $password) {
             //if (\Illuminate\Support\Facades\Hash::check('password', $user->password)) {
-                Cookie::queue('user_dni', $user->dni, 5);
-                Cookie::queue('user_name', $user->name, 5);
-                Cookie::queue('user_surname', $user->surname, 5);
-                Cookie::queue('user_phone', $user->phone, 5);
-                Cookie::queue('user_email', $user->email, 5);
-                Cookie::queue('user_type', $user->type, 5);
+                Cookie::queue('user_dni', $user->dni, 60);
+                Cookie::queue('user_name', $user->name, 60);
+                Cookie::queue('user_surname', $user->surname, 60);
+                Cookie::queue('user_phone', $user->phone, 60);
+                Cookie::queue('user_email', $user->email, 60);
+                Cookie::queue('user_type', $user->type, 60);
            // }
             // Autenticación exitosa
             // Aquí puedes realizar alguna acción, como redirigir al usuario a otra página
