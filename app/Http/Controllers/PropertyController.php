@@ -26,6 +26,12 @@ class PropertyController extends Controller
         return view('propertyDetails', ['property' => $property]);
     }
 
+    public function rentPay($id)
+    {
+        $propertyRes = DB::select('select * from properties where id = ?', [$id]);
+        return view('reservePage', ['property' => $propertyRes]);
+    }
+
     public function create()
     {
         return view('propertyCreation');

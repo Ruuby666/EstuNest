@@ -45,3 +45,5 @@ Route::get('/create', [PropertyController::class, 'create'])->name('create');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/userDeatils', [UserController::class, 'show'])->name('userDetails');
+
+Route::get('/reserve/{id}', [PropertyController::class, 'rentPay'])->name('reserveProperty');

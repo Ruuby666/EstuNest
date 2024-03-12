@@ -32,6 +32,7 @@
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
+    margin-left: 4%;
 }
 
 body.site {
@@ -128,6 +129,7 @@ Css para las cartas
 
   h2 {
     margin-bottom: 10px;
+    font-size: 20px;
   }
 
   p {
