@@ -50,5 +50,4 @@ class UserController extends Controller
         return view('userProperties', ['properties' => $properties]);
     }
 
-    
 }

@@ -10,12 +10,10 @@ class Rent extends Model
     use HasFactory;
 
     protected $fillable = [
-        'property_id',
-        'user_id',
-        'start_date',
-        'end_date',
-        'price',
-        'status',
+        'id_property',
+        'dni_tenant',
+        'start_month',
+        'end_month',
     ];
 
     public function property()
@@ -28,7 +26,7 @@ class Rent extends Model
         return $this->belongsTo(User::class);
     }
 
-    
+
 
 
 

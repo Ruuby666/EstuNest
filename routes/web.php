@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RentController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -50,3 +51,10 @@ Route::get('/userProperties', [UserController::class, 'viewMyProperties'])->name
 
 // Route::get('/userDetails/{id}/edit', 'PropertyController@edit')->name('property.edit');
 Route::delete('/userProperties/{id}', [PropertyController::class, 'destroy'])->name('property.delete');
+
+Route::get('/userDeatils', [UserController::class, 'show'])->name('userDetails');
+
+Route::get('/reserve/{id}', [PropertyController::class, 'rentPay'])->name('reserveProperty');
+
+Route::post('/reserve/{id}/pay', [RentController::class, 'pay'])->name('reserveProperty.pay');
+
