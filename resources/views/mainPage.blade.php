@@ -9,7 +9,8 @@
 @section('content')
 
 <div id='filter'>
-    <form id='catalogFilter' action="{{ route('catalog') }}" method="GET">
+    <form id='catalogFilter' action="{{ route('filter') }}" method="POST">
+        @csrf 
         <label for="star">Fecha de inicio: </label>
         <input type="month" id="start" name="start" placeholder="fecha de inicio">
         <label for="end">Fecha de salida: </label>

@@ -5,6 +5,8 @@ use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RentController;
+use App\Http\Controllers\FilterController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -57,5 +59,5 @@ Route::get('/reserve/{id}', [PropertyController::class, 'rentPay'])->name('reser
 Route::post('/reserve/{id}/pay', [RentController::class, 'pay'])->name('reserveProperty.pay');
 
 
+Route::post('/filter', [FilterController::class, 'filter'])->name('filter');
 
-//SELECT * FROM properties WHERE id NOT IN (SELECT id_property FROM rents);
