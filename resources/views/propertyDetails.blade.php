@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="{{ asset('css/propertyDetails.css') }}">
-
+<script src="{{ asset('js/date.js') }}"></script>
 @extends('layouts.app')
 
 @section('title', 'Property Details')
@@ -47,7 +47,7 @@
                             min="{{ $nextMonth }}" required>
                         <label for="end">Fecha de salida: </label>
                         <input type="month" id="end" name="end" placeholder="fecha de salida"
-                            min="{{ $nextMonth }}" required>
+                            required>
                     </div>
                     <div class="buttonReserve">
                         <button id="reserveButton" type="submit">Reservar</button>
