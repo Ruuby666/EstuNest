@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cookie;
 
 
 class UserController extends Controller
@@ -41,9 +43,11 @@ class UserController extends Controller
         return redirect()->route('logIn');
     }
 
-    public function show()
+    public function viewMyProperties()
     {
-        return view('userDetails');
+        $user = Cookie::get('user_dni');
+        $properties = DB::select('select * from properties where dni_landlord = ?', [$user]);
+        return view('userProperties', ['properties' => $properties]);
     }
 
 }

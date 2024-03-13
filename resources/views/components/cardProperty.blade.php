@@ -3,7 +3,7 @@
         <div class="property-item">
             <div class="article-wrapper">
                 <figure>
-                    <img src="/img/logo.png" alt="" />
+                    <img src="/img/properties/{{$property->images}}" alt="" />
                 </figure>
                 <div class="article-body">
                     <h2>{{$property->address}}</h2>

@@ -22,9 +22,11 @@
                     <a href="{{ route('catalog') }}"><span>Catálogo</span></a>
                     <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
                 
-                    @unless(Cookie::has('user_name'))
+                    @if(Cookie::has('user_name'))
+                        <a href="{{ route('userProperties') }}"><span>Mis propiedades</span></a>
+                    @else
                         <a href="{{ route('signUp') }}"><span>Sign Up</span></a>
-                    @endunless
+                    @endif
                 
                     <a href="{{ Cookie::has('user_name') ? route('userDetails') : route('logIn') }}">
                         <span>

@@ -1,0 +1,73 @@
+.propertyListContainer {
+    padding: 65px;
+    border-radius: 35px;
+    border: 1px solid rgba(169, 169, 169, 0.208);
+    width: 80%;
+    margin: 50px auto;
+    box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.propertyListTitle {
+    margin-bottom: 50px;
+}
+
+.propertyList {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+thead {
+    background-color: #6a929d;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6a929d;
+    color: white;
+}
+
+button#edit {
+    background-color: #f7d97d;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button#delete {
+    background-color: #ff6262;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button#edit:hover {
+    background-color: #fde59f;
+    color: black;
+
+}
+
+button#delete:hover {
+    background-color: #ff8383;
+    color: black;
+}

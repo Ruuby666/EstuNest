@@ -1,16 +1,9 @@
 <link rel="stylesheet" href="{{ asset('css/propertyCreation.css') }}">
+{{-- <script src="{{ asset('js/index.js')}}"></script> --}}
 
-@extends('layouts.app')
-
-@section('title', 'EstuNest - Crear Propiedad')
-
-@section('content')
-
-    
-<div class="propertyCreation">
+<div class="creation-container"">
     <div class="div-propertyCreation-form">
-        <h2 class="form-title">Creación de Propiedad</h2>
-        <form class="propertyCreation-form" id="propertyCreation-form" action="" method="POST" novalidate>
+        <form class="propertyCreation-form" id="propertyCreation-form" action="{{ route('property.create') }}" method="POST" novalidate enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <input type="text" name="address" id="address" placeholder="Dirección" required>
@@ -31,7 +24,7 @@
                 <input type="file" name="property-image" id="property-image" required>
             </div>
             <div class="form-group form-button">
-                <input type="submit" name="signup" id="signup" class="form-submit" value="Publicar">
+                <input type="submit" name="publish" id="publish" class="form-submit" value="Publicar">
             </div>
         </form>
     </div>
@@ -40,7 +33,3 @@
     </div>
 </div>
 
-
-
-
-@endsection

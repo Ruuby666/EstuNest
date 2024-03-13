@@ -20,6 +20,12 @@ h2 {
     font-weight: 700;
     color: #222;
     font-size: 36px;
+    display: inline-block;
+    width: 100%;
+}
+
+#logOut {
+    text-align: right;
 }
 
 .site-content{
@@ -27,12 +33,7 @@ h2 {
     justify-content: center;
 }
 
-.container {
-    width: 100%;
-    background: #fff;
-    margin: 0 auto;
-    box-shadow: 0 15px 16.83px .17px rgba(0,0,0,.05);
-}
+
 
 .form-check{
     display: flex;
@@ -52,13 +53,23 @@ h2 {
 }
 
 .propertyCreation {
-    padding: 65px;
-    display: flex;
+    padding: 45px;
     border-radius: 35px;
     border: 1px solid rgba(169, 169, 169, 0.208);
-    width: fit-content;
     margin: 50px;
     box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 150px;
+    overflow: hidden;
+}
+
+#propertyCreationContainer {
+    transition: height 0.5s ease;
+}
+
+.creation-container {
+    display: flex;
+    margin: 50px;
     align-items: center;
 }
 
@@ -101,12 +112,6 @@ h2 {
 }
 
 
-.div-propertyCreation-form {
-    margin-left: 75px;
-    margin-right: 75px;
-    padding-left: 34px
-}
-
 .propertyCreation-form {
     width: 100%
 }
@@ -139,19 +144,71 @@ input:hover {
     border-bottom: 1px solid #222
 }
 
-
-.logIn-content{
-    padding: 75px;
+.userContainer {
+    padding: 65px;
     display: flex;
     border-radius: 35px;
     border: 1px solid rgba(169, 169, 169, 0.208);
-    width: fit-content;
-    margin: auto;
+    width: 20%;
+    margin: 50px;
     box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
-    flex-direction: row-reverse;
-    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-height: 650px;
 }
 
-.errorInForm {
-    color: red;
+.userDetails > * {
+    
+    margin-bottom: 40px;
+}
+
+.profilePicture {
+    margin-bottom: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+.uploadDocument {
+    padding: 45px;
+    border-radius: 35px;
+    border: 1px solid rgba(169, 169, 169, 0.208);
+    margin: 50px;
+    box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 170px;
+    overflow: hidden;
+}
+
+#uploadDocumentContainer {
+    
+    transition: height 0.5s ease;
+}
+
+#uploadDocumentForm {
+    margin: 40px;
+}
+
+#documentForm {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#file {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.submitButton {
+    background-color: #6a929d;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #b1d2db;
+    color: rgb(40, 40, 40);
+    border-bottom: 0 !important;
 }
