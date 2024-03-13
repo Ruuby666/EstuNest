@@ -37,16 +37,22 @@
                 </div>
             </div>
             <div class="rightbottomPart">
-                <div class="dateRent">
-                    <label for="star">Fecha de inicio: </label>
-                    <input type="date" id="start" name="start" placeholder="fecha de inicio">
-                    <label for="end">Fecha de salida: </label>
-                    <input type="date" id="end" name="end" placeholder="fecha de salida">
-                </div>
-                <div class="buttonReserve">
-                    <button id="reserveButton"><a
-                            href="{{ route('reserveProperty', ['id' => $property[0]->id]) }}">Reservar</a></button>
-                </div>
+                @php
+                    $nextMonth = now()->addMonth()->format('Y-m');
+                @endphp
+                <form action="{{ route('reserveProperty', ['id' => $property[0]->id]) }}" method="GET">
+                    <div class="dateRent">
+                        <label for="star">Fecha de inicio: </label>
+                        <input type="month" id="start" name="start" placeholder="fecha de inicio"
+                            min="{{ $nextMonth }}" required>
+                        <label for="end">Fecha de salida: </label>
+                        <input type="month" id="end" name="end" placeholder="fecha de salida"
+                            min="{{ $nextMonth }}" required>
+                    </div>
+                    <div class="buttonReserve">
+                        <button id="reserveButton" type="submit">Reservar</button>
+                    </div>
+                </form>
             </div>
         </div>
 

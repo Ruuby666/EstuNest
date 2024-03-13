@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RentController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -47,3 +48,6 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/userDeatils', [UserController::class, 'show'])->name('userDetails');
 
 Route::get('/reserve/{id}', [PropertyController::class, 'rentPay'])->name('reserveProperty');
+
+Route::post('/reserve/{id}/pay', [RentController::class, 'pay'])->name('reserveProperty.pay');
+

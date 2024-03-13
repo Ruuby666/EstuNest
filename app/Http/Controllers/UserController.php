@@ -45,5 +45,5 @@ class UserController extends Controller
     {
         return view('userDetails');
     }
-    
+
 }

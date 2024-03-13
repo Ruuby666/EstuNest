@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('dni_tenant');
             $table->unsignedBigInteger('id_property');
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->string('start_month');
+            $table->string('end_month');
             $table->timestamps();
 
             $table->foreign('dni_tenant')->references('dni')->on('users')->onDelete('cascade');
