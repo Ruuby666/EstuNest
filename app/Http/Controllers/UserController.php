@@ -32,7 +32,7 @@ class UserController extends Controller
         $user -> name = $request->input('name');
         $user -> surname = $request->input('surname');
         $user -> email = $request-> input('email');
-        $user -> password = $request->input('pass');
+        $user -> password = bcrypt($request->input('pass'));
         $user -> phone = $request->input('phone');
         $user -> type = 'landlord';
         $user -> save();

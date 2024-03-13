@@ -24,7 +24,7 @@ class LoginController extends Controller
         $user = User::where('email', $email)->first();
 
         // Verificar si el usuario existe y si la contraseña coincide
-        if ($user && $user->password == $password) {
+        if ($user && \Illuminate\Support\Facades\Hash::check($password, $user->password)) {
             //if (\Illuminate\Support\Facades\Hash::check('password', $user->password)) {
                 Cookie::queue('user_dni', $user->dni, 60);
                 Cookie::queue('user_name', $user->name, 60);
