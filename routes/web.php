@@ -55,3 +55,7 @@ Route::delete('/userProperties/{id}', [PropertyController::class, 'destroy'])->n
 Route::get('/reserve/{id}', [PropertyController::class, 'rentPay'])->name('reserveProperty');
 
 Route::post('/reserve/{id}/pay', [RentController::class, 'pay'])->name('reserveProperty.pay');
+
+
+
+//SELECT * FROM properties WHERE id NOT IN (SELECT id_property FROM rents);

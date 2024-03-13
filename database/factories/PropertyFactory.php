@@ -26,7 +26,7 @@ class PropertyFactory extends Factory
             'price' => $this->faker->numberBetween(10000, 1000000),
             'city' => $this->faker->city,
             'address' => $this->faker->address,
-            'images' => json_encode([$this->faker->imageUrl()]),
+            'images' => $this->faker->imageUrl(),
             'dni_landlord' => $landlord->dni,
         ];
     }

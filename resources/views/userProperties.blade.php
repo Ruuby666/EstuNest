@@ -11,42 +11,40 @@
             <h1>Mis propiedades</h1>
         </div>
         <div>
-            @foreach ($properties as $property)
-                <div class="propertyList">
-                    <table>
-                        <thead>
+            <div class="propertyList">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Dirección</th>
+                            <th>Ciudad</th>
+                            <th>Precio</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($properties as $property)
                             <tr>
-                                <th>ID</th>
-                                <th>Dirección</th>
-                                <th>Ciudad</th>
-                                <th>Precio</th>
-                                <th>Opciones</th>
+                                <td>{{ $property->id }}</td>
+                                <td>{{ $property->address }}</td>
+                                <td>{{ $property->city }}</td>
+                                <td>{{ $property->price }}€</td>
+                                <td>
+                                    <form action="" method="GET" style="display: inline;">
+                                        @csrf
+                                        <button type="submit" id="edit">Editar</button>
+                                    </form>
+                                    <form action="{{ route('property.delete', ['id' => $property->id]) }}" method="POST" style="display: inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" id="delete">Borrar</button>
+                                    </form>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($properties as $property)
-                                <tr>
-                                    <td>{{ $property->id }}</td>
-                                    <td>{{ $property->address }}</td>
-                                    <td>{{ $property->city }}</td>
-                                    <td>{{ $property->price }}€</td>
-                                    <td>
-                                        <form action="" method="GET" style="display: inline;">
-                                            @csrf
-                                            <button type="submit" id="edit">Editar</button>
-                                        </form>
-                                        <form action="{{ route('property.delete', ['id' => $property->id]) }}" method="POST" style="display: inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" id="delete">Borrar</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            @endforeach
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
