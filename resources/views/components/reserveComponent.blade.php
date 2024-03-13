@@ -3,7 +3,7 @@
     <div class="property-box">
         <h2>Datos de la propiedad</h2>
         <div class="property-info">
-            <img src="/img/logo.png" alt="Property Image">
+            <img src="/img/properties/{{ $property[0]->images }}" alt="Property Image">
             <div class="property-details">
                 <h3>{{ $property[0]->address }}</h3>
                 <p>{{ $property[0]->description }}</p>
@@ -35,7 +35,6 @@
             <div class="form-group">
                 <label for="date-card">Fecha de caducidad:</label>
                 @php
-                    // Obtener el próximo mes a partir de la fecha actual
                     $nextMonth = now()->addMonth()->format('Y-m');
                 @endphp
                 <input type="month" id="date-card" name="date-card" required class="form-control" min="{{ $nextMonth }}" placeholder="MM/YY">

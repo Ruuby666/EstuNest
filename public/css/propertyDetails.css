@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid lime; */
 }
 
 .container.site-content {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 a{
@@ -75,7 +75,7 @@ input{
 }
 
 .rightPart {
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
