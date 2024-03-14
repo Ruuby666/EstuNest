@@ -14,11 +14,11 @@ class FilterController extends Controller
         $address = $request->address;
 
         if ($address != null) {
-            $properties = DB::select('select * from properties where properties.id not in (select id_property from rents where (start_month <= ? and end_month >= ? and address = ? ) OR (start_month >= ? and end_month <= ? and address = ?))', [$startDate, $endDate, $address]);
+            $properties = DB::select('SELECT * FROM properties WHERE address = ? and id NOT IN (SELECT id_property FROM rents WHERE start_month <= ? OR end_month >= ?)', [$address, $startDate, $endDate]);
             return view('catalogo', ['properties' => $properties]);
         }
         else {
-            $properties = DB::select('select * from properties where properties.id not in (select id_property from rents where (start_month <= ? and end_month >= ? ) OR (start_month >= ? and end_month <= ?))', [$startDate, $endDate]);
+            $properties = DB::select('SELECT * FROM properties WHERE id NOT IN (SELECT id_property FROM rents WHERE start_month <= ? OR end_month >= ?)', [$startDate, $endDate]);
             return view('catalogo', ['properties' => $properties]);
         }
     }

@@ -52,6 +52,8 @@
                     <input type="submit" value="Subir" class="submitButton">
                 </form>
             </div>
+
+            <small>Si al cabo de 5 dias laborales no hay cambios en su Verificado, significa que no ha sido aceptada.</small>
         </div>
 
     </div>
