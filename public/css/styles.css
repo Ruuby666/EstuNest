@@ -32,7 +32,6 @@
     flex-grow: 1;
     align-items: center;
     justify-content: space-between;
-    margin-left: 4%;
 }
 
 body.site {
@@ -93,17 +92,16 @@ Css para las cartas
     overflow: hidden;
     width: 230px;
     height: 400px;
-    -webkit-box-shadow: inset 9px 9px 10px -4px rgba(0,0,0,0.25);
-    -moz-box-shadow: inset 9px 9px 10px -4px rgba(0,0,0,0.25);
-    box-shadow: inset 9px 9px 10px -4px rgba(0,0,0,0.25);
+    -webkit-box-shadow:  9px 9px 10px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow:  9px 9px 10px -4px rgba(0,0,0,0.25);
+    box-shadow:  9px 9px 10px -4px rgba(0,0,0,0.25);
     transition: transform 0.3s ease-in-out;
   }
 
   .article-wrapper:hover {
-    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
-    -webkit-box-shadow: 9px 9px 10px -4px rgba(0,0,0,0.25);
-    -moz-box-shadow: 9px 9px 10px -4px rgba(0,0,0,0.25);
-    box-shadow: 9px 9px 10px -4px rgba(0,0,0,0.25);
+    -webkit-box-shadow: inset 9px 9px 10px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 9px 9px 10px -4px rgba(0,0,0,0.25);
+    box-shadow: inset 9px 9px 10px -4px rgba(0,0,0,0.25);
   }
 
   figure {
@@ -157,4 +155,27 @@ Css para las cartas
   label{
     width: 100%;
   }
-
+  
+  .text {
+    font-size: 30px;
+    display: flex;
+    transform: translateX(-50%);
+    user-select: none;
+    margin-left: 90px;
+    margin-right: -50px;
+  
+    .wrapper {
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      .letter {
+        transition: ease-out 1s;
+        transform: translateY(40%);
+      }
+      &:hover {
+        .letter {
+          transform: translateY(-80%);
+        }
+      }
+    }
+  }

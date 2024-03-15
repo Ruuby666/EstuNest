@@ -18,6 +18,34 @@
         <div class="container">
             <div class="header">
                 <a href="{{route('mainPage')}}"><div id="logo"><img src="/img/logo.png" alt="logo EstuNest"></div></a>
+
+                <div class="text">
+                    <div class="wrapper">
+                        <div id="E" class="letter">E</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="S" class="letter">s</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="T" class="letter">t</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="U" class="letter">u</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="N" class="letter">N</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="E" class="letter">e</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="S" class="letter">s</div>
+                    </div>
+                    <div class="wrapper">
+                        <div id="T" class="letter">t</div>
+                    </div>
+                </div>
+
                 <div id="menu">
                     <a href="{{ route('catalog') }}"><span>Catálogo</span></a>
                     <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
@@ -51,10 +79,10 @@
         <footer>
             <div class="footer">
                 <div class="row">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-youtube"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
                 
                 <div class="row">
