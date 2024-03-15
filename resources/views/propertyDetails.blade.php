@@ -40,7 +40,7 @@
                 @php
                     $nextMonth = now()->addMonth()->format('Y-m');
                 @endphp
-                <form action="{{ route('reserveProperty', ['id' => $property[0]->id]) }}" method="GET">
+                <form action="{{Cookie::has('user_name') ? route('reserveProperty', ['id' => $property[0]->id]) : route('logIn')}}" method="GET">
                     <div class="dateRent">
                         <label for="star">Fecha de inicio: </label>
                         <input type="month" id="start" name="start" placeholder="fecha de inicio"
