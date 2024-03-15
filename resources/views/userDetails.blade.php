@@ -46,7 +46,7 @@
             <h2 id="uploadDocumentTitle">¿Eres estudiante? Sube tu documento de autentificación aqui <i class="fas fa-sort-down"></i></h2>
 
             <div id="uploadDocumentForm">
-                <form action="{{ route('documentNew')}}" method="POST" enctype="multipart/form-data" id="documentForm">
+                <form action="{{ route('userDetails.uploadDocument')}}" method="POST" enctype="multipart/form-data" id="documentForm">
                     @csrf
                     <input type="file" name="file" id="file" required>
                     <input type="submit" value="Subir" class="submitButton">

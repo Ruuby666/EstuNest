@@ -46,7 +46,8 @@ Route::get('/property/{id}', [PropertyController::class, 'show'])->name('show.pr
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/userDetails', [UserController::class, 'details'])->name('userDetails');
-// Route::get('/userDetails',[DocumentController::class, 'uploadDocument'])->name('documentNew'); AL PONER ESTO DA ERROR
+
+Route::post('/userDetails', [DocumentController::class, 'uploadDocument'])->name('userDetails.uploadDocument');
 
 
 Route::post('/createProperty', [PropertyController::class, 'create'])->name('property.create');
