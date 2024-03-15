@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\LoginController;
@@ -46,12 +47,15 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/userDetails', [UserController::class, 'details'])->name('userDetails');
 
+Route::get('/userDetails',[DocumentController::class, 'uploadDocument'])->name('documentNew');
+
 Route::post('/createProperty', [PropertyController::class, 'create'])->name('property.create');
 
 Route::get('/userProperties', [UserController::class, 'viewMyProperties'])->name('userProperties');
 
 
 // Route::get('/userDetails/{id}/edit', 'PropertyController@edit')->name('property.edit');
+
 Route::delete('/userProperties/{id}', [PropertyController::class, 'destroy'])->name('property.delete');
 
 Route::get('/reserve/{id}', [PropertyController::class, 'rentPay'])->name('reserveProperty');

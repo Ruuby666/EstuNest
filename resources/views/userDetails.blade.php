@@ -27,26 +27,26 @@
                         <i class="fas fa-times-circle"></i>
                     @endif
                 </p><br>
-                
+
                 <a href="{{ route('logout') }}" id="logOut" class="btn btn-primary">Log Out</a>
             </div>
         </div>
     </div>
-    
-    
+
+
     <div id='dropdowns'>
         <div class="propertyCreation" id="propertyCreationContainer">
 
             <h2 id="toggleForm">¿Desea publicar una propiedad? <i class="fas fa-sort-down"></i></h2>
             @include('components.propertyCreation')
-    
+
         </div>
-    
+
         <div class="uploadDocument" id="uploadDocumentContainer">
             <h2 id="uploadDocumentTitle">¿Eres estudiante? Sube tu documento de autentificación aqui <i class="fas fa-sort-down"></i></h2>
 
             <div id="uploadDocumentForm">
-                <form action="{{ route('userDetails')}}" method="POST" enctype="multipart/form-data" id="documentForm">
+                <form action="{{ route('documentNew')}}" method="POST" enctype="multipart/form-data" id="documentForm">
                     @csrf
                     <input type="file" name="file" id="file" required>
                     <input type="submit" value="Subir" class="submitButton">
@@ -57,6 +57,6 @@
         </div>
 
     </div>
-    
+
 
 @endsection
