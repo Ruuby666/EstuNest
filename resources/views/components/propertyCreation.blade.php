@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="{{ asset('css/propertyCreation.css') }}">
 {{-- <script src="{{ asset('js/index.js')}}"></script> --}}
 
-<div class="creation-container"">
+<div class="creation-container">
     <div class="div-propertyCreation-form">
         <form class="propertyCreation-form" id="propertyCreation-form" action="{{ route('property.create') }}" method="POST" novalidate enctype="multipart/form-data">
             @csrf

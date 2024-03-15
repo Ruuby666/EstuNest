@@ -43,6 +43,17 @@ class UserController extends Controller
         return redirect()->route('logIn');
     }
 
+    public function details()
+    {
+        $name = Cookie::get('user_name');
+        $surname = Cookie::get('user_surname');
+        $email = Cookie::get('user_email');
+        $phone = Cookie::get('user_phone');
+        $type = Cookie::get('user_type');
+
+        return view('userDetails', ['name' => $name, 'surname' => $surname, 'email' => $email, 'phone' => $phone, 'type' => $type]);
+    }
+
     public function viewMyProperties()
     {
         $user = Cookie::get('user_dni');

@@ -1,18 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-.container.site-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 a{
     text-align: right;
-    margin-right: 0px !important;
 }
 
 input{

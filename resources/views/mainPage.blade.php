@@ -10,13 +10,17 @@
 
 <div id='filter'>
     <form id='catalogFilter' action="{{ route('filter') }}" method="POST">
-        @csrf 
+    @csrf 
+        @php
+            $nextMonth = now()->addMonth()->format('Y-m');
+        @endphp
         <label for="star">Fecha de inicio: </label>
-        <input type="month" id="start" name="start" placeholder="fecha de inicio">
+        <input type="month" id="start" name="start" min="{{$nextMonth}}" placeholder="fecha de inicio">
         <label for="end">Fecha de salida: </label>
-        <input type="month" id="end" name="end"  placeholder="fecha de salida">
+        <input type="month" id="end" name="end" placeholder="fecha de salida">
         <input type="text" id="address" name="address" placeholder="Ciudad, calle o lugar">
         <input type="submit" value="Buscar">
+        {{-- <input type="reset" value="Resetear"> --}}
     </form>
 </div>
 

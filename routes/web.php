@@ -40,13 +40,13 @@ Route::get('/login', function () {
 
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 
-Route::get('/property/{id}', [PropertyController::class, 'show'])->name('property');
+Route::get('/property/{id}', [PropertyController::class, 'show'])->name('show.property');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/userDetails', [PropertyController::class, 'create'])->name('userDetails');
+Route::get('/userDetails', [UserController::class, 'details'])->name('userDetails');
 
-Route::post('/userDetails', [PropertyController::class, 'register'])->name('property.create');
+Route::post('/createProperty', [PropertyController::class, 'create'])->name('property.create');
 
 Route::get('/userProperties', [UserController::class, 'viewMyProperties'])->name('userProperties');
 

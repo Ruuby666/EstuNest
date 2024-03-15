@@ -42,18 +42,8 @@ class PropertyController extends Controller
         return view('reservePage', ['property' => $propertyRes]);
     }
 
-    public function create()
-    {
-        $name = Cookie::get('user_name');
-        $surname = Cookie::get('user_surname');
-        $email = Cookie::get('user_email');
-        $phone = Cookie::get('user_phone');
-        $type = Cookie::get('user_type');
 
-        return view('userDetails', ['name' => $name, 'surname' => $surname, 'email' => $email, 'phone' => $phone, 'type' => $type]);
-    }
-
-    public function register(Request $request) {
+    public function create(Request $request) {
 
         try {
             // Tu código actual aquí
