@@ -24,8 +24,13 @@ class User extends Model
     {
         return $this->hasMany(Property::class, 'dni_landlord', 'dni');
     }
+    public function document()
+    {
+        return $this->hasOne(Document::class, 'dni_user', 'dni');
+    }
 
-    
+
+
 
 
 }
