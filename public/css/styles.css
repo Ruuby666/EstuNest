@@ -181,3 +181,13 @@ Css para las cartas
     }
   }
 
+#adminTitle {
+    margin-left: 45%;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#logOutButton {
+    font-size: 20px;
+    width: 200px !important;
+}

@@ -17,7 +17,7 @@
     @section('header')
         <div class="container">
             <div class="header">
-                <a href="{{route('mainPage')}}"><div id="logo"><img src="/img/logo.png" alt="logo EstuNest"></div></a>
+                <a href="{{ Cookie::get('user_type') === 'admin' ? route('mainAdmin') : route('mainPage') }}"><div id="logo"><img src="/img/logo.png" alt="logo EstuNest"></div></a>
 
                 <div class="text">
                     <div class="wrapper">
@@ -47,9 +47,9 @@
                 </div>
 
                 <div id="menu">
-                    @if(Cookie::has('user_name') && Cookie::get('user_name') === 'Admin')
-                        <span>Admin</span>
-                        <a href="{{ route('logout') }}"><span>Logout</span></a>
+                    @if(Cookie::has('user_type') && Cookie::get('user_type') === 'admin')
+                        <span id="adminTitle">Modo Administrador</span>
+                        <a href="{{ route('logout') }}" id="logOutButton"><span>Log Out</span></a>
                     @else
                         <a href="{{ route('catalog') }}"><span>Catálogo</span></a>
                         <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
