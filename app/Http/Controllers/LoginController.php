@@ -35,7 +35,12 @@ class LoginController extends Controller
            // }
             // Autenticación exitosa
             // Aquí puedes realizar alguna acción, como redirigir al usuario a otra página
-            return redirect()->route('mainPage');
+            if($user->type == 'admin'){
+                return redirect()->route('mainAdmin');
+            }else{
+                return redirect()->route('mainPage');
+            }
+
         } else {
             // Autenticación fallida
             // Vuelve al formulario de inicio de sesión con un mensaje de error
@@ -52,7 +57,7 @@ class LoginController extends Controller
         Cookie::queue(Cookie::forget('user_phone'));
         Cookie::queue(Cookie::forget('user_email'));
         Cookie::queue(Cookie::forget('user_type'));
-        
+
 
         return redirect('/');
     }

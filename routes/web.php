@@ -66,3 +66,9 @@ Route::post('/reserve/{id}/pay', [RentController::class, 'pay'])->name('reserveP
 
 Route::post('/filter', [FilterController::class, 'filter'])->name('filter');
 
+Route::get('/documents', [DocumentController::class, 'viewDocuments'])->name('mainAdmin');
+
+Route::post('/documents/{id}/accept', [DocumentController::class, 'acceptDocument'])->name('document.accept');
+
+Route::post('/documents/{id}/deny', [DocumentController::class, 'denyDocument'])->name('document.deny');
+

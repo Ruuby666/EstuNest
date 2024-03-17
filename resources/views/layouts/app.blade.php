@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>@yield('title')</title>
 </head>
@@ -47,26 +47,31 @@
                 </div>
 
                 <div id="menu">
-                    <a href="{{ route('catalog') }}"><span>Catálogo</span></a>
-                    <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
-                
-                    @if(Cookie::has('user_name'))
-                        <a href="{{ route('userProperties') }}"><span>Mis propiedades</span></a>
+                    @if(Cookie::has('user_name') && Cookie::get('user_name') === 'Admin')
+                        <span>Admin</span>
+                        <a href="{{ route('logout') }}"><span>Logout</span></a>
                     @else
-                        <a href="{{ route('signUp') }}"><span>Sign Up</span></a>
+                        <a href="{{ route('catalog') }}"><span>Catálogo</span></a>
+                        <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
+
+                        @if(Cookie::has('user_name'))
+                            <a href="{{ route('userProperties') }}"><span>Mis propiedades</span></a>
+                        @else
+                            <a href="{{ route('signUp') }}"><span>Sign Up</span></a>
+                        @endif
+
+                        <a href="{{ Cookie::has('user_name') ? route('userDetails') : route('logIn') }}">
+                            <span>
+                                @if(Cookie::has('user_name'))
+                                    <i class="fas fa-user-tie"></i> &nbsp; {{ Cookie::get('user_name') }}
+                                @else
+                                    Log In
+                                @endif
+                            </span>
+                        </a>
                     @endif
-                
-                    <a href="{{ Cookie::has('user_name') ? route('userDetails') : route('logIn') }}">
-                        <span>
-                            @if(Cookie::has('user_name'))
-                                <i class="fas fa-user-tie"></i> &nbsp; {{ Cookie::get('user_name') }}
-                            @else
-                                Log In
-                            @endif
-                        </span>
-                    </a>
                 </div>
-                
+
             </div>
         </div>
     @show
@@ -84,7 +89,7 @@
                     <a href="#"><i class="fab fa-youtube"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
-                
+
                 <div class="row">
                     <ul>
                         <li><a href="#">Contact us</a></li>
@@ -94,9 +99,9 @@
                         <li><a href="#">Career</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="row">
-                    ESTUNEST Copyright © 2024 estuNest - All rights reserved || Designed By: Pedro Porteros & Rubén Sepulveda 
+                    ESTUNEST Copyright © 2024 estuNest - All rights reserved || Designed By: Pedro Porteros & Rubén Sepulveda
                 </div>
             </div>
         </footer>

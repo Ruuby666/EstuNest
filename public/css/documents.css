@@ -1,0 +1,66 @@
+/* Estilos para la tabla de documentos */
+
+.ListContainer {
+    padding: 65px;
+    border-radius: 35px;
+    border: 1px solid rgba(169, 169, 169, 0.208);
+    width: 80%;
+    margin: 50px auto;
+    box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+.ListTitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.List {
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.List th,
+.List td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.List th {
+    background-color: #f2f2f2;
+}
+
+.List tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.List tr:hover {
+    background-color: #ddd;
+}
+
+/* Estilos para los botones de opciones */
+.List form {
+    display: inline;
+    margin-right: 5px;
+}
+
+.List button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.List button:hover {
+    background-color: #0056b3;
+}
+
+.image{
+    height: 100px;
+    width: auto;
+}
