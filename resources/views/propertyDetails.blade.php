@@ -40,21 +40,48 @@
                 @php
                     $nextMonth = now()->addMonth()->format('Y-m');
                 @endphp
-                <form action="{{Cookie::has('user_name') ? route('reserveProperty', ['id' => $property[0]->id]) : route('logIn')}}" method="GET">
-                    <div class="dateRent">
-                        <label for="star">Fecha de inicio: </label>
-                        <input type="month" id="start" name="start" placeholder="fecha de inicio"
-                            min="{{ $nextMonth }}" required>
-                        <label for="end">Fecha de salida: </label>
-                        <input type="month" id="end" name="end" placeholder="fecha de salida"
-                            required>
-                    </div>
-                    <div class="buttonReserve">
-                        <button id="reserveButton" type="submit">Reservar</button>
-                    </div>
-                </form>
+                @if (Cookie::has('user_name'))
+                    <form action="{{route('reserveProperty', ['id' => $property[0]->id])}}" method="GET" novalidate>
+                        <div class="dateRent">
+                            <label for="star">Fecha de inicio: </label>
+                            <input type="month" id="start" name="start" placeholder="fecha de inicio"
+                                min="{{ $nextMonth }}" required>
+                            <label for="end">Fecha de salida: </label>
+                            <input type="month" id="end" name="end" placeholder="fecha de salida"
+                                required>
+                        </div>
+                        <div class="buttonReserve">
+                            @if (Cookie::get('user_type') === 'both')
+                                <button id="reserveButton" type="submit">Reservar</button>
+                            @else
+                                <p>Si desea alquilar una propiedad, debe subir un documento que verifique que usted es estudiante <a href="{{ route('userDetails') }}">aquí</a></p>       
+                            @endif
+                        </div>
+                    </form>   
+                @else 
+                    <form action="{{route('logIn')}}" method="GET" novalidate>
+                        <div class="dateRent">
+                            <label for="star">Fecha de inicio: </label>
+                            <input type="month" id="start" name="start" placeholder="fecha de inicio"
+                                min="{{ $nextMonth }}" required>
+                            <label for="end">Fecha de salida: </label>
+                            <input type="month" id="end" name="end" placeholder="fecha de salida"
+                                required>
+                        </div>
+                        <div class="buttonReserve">
+                            <button id="reserveButton" type="submit">Reservar</button>
+                        </div>
+                    </form>   
+                @endif
+                
             </div>
         </div>
 
     </div>
 @endsection
+
+
+{{-- 
+                            
+    
+    --}}
