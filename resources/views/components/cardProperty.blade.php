@@ -8,6 +8,9 @@
                 <div class="article-body">
                     <h2>{{$property->address}}</h2>
                     <p>
+                        {{$property->city}}
+                    </p><br>
+                    <p>
                         {{$property->price}} €
                     </p>
                     <a href="{{ route('show.property', ['id' => $property->id]) }}" class="read-more">

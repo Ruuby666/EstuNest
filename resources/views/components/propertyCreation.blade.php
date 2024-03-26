@@ -1,5 +1,4 @@
 <link rel="stylesheet" href="{{ asset('css/propertyCreation.css') }}">
-{{-- <script src="{{ asset('js/index.js')}}"></script> --}}
 
 <div class="creation-container">
     <div class="div-propertyCreation-form">
@@ -7,21 +6,39 @@
             @csrf
             <div class="form-group">
                 <input type="text" name="address" id="address" placeholder="Dirección" required>
+                @error('address')
+                    <small class="errorInForm">{{ $message }}</small>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="text" name="city" id="city" placeholder="Ciudad" required>
+                @error('city')
+                    <small class="errorInForm">{{ $message }}</small>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="text" name="rooms" id="rooms" placeholder="Habitaciones Disponibles" required>
+                @error('rooms')
+                    <small class="errorInForm">{{ $message }}</small>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="text" name="description" id="description" placeholder="Descripción" required>
+                @error('description')
+                    <small class="errorInForm">{{ $message }}</small>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="text" name="price" id="price" placeholder="Precio" required>
+                @error('price')
+                    <small class="errorInForm">{{ $message }}</small>
+                @enderror
             </div>
             <div class="form-group">
                 <input type="file" name="property-image" id="property-image" required>
+                @error('property-image')
+                    <small class="errorInForm">{{ $message }}</small>
+                @enderror
             </div>
             <div class="form-group form-button">
                 <input type="submit" name="publish" id="publish" class="form-submit" value="Publicar">

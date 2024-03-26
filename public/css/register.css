@@ -178,8 +178,69 @@ input:hover {
     box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
     flex-direction: row-reverse;
     align-items: center;
+    margin: 60px;
 }
 
 .errorInForm {
     color: red;
+}
+
+
+@media (max-width: 850px) {
+
+    .signUp-content {
+        flex-direction: column;
+        padding: 35px;
+        margin: 20px;
+    }
+
+    .logIn-content {
+        flex-direction: column;
+        padding: 35px;
+        margin: 20px;
+    }
+
+    .div-signUp-form,.signUp-image,.signin-form,.signin-image {
+        width: 100%;
+    }
+
+    .form-submit {
+        width: 100%;
+        margin-top: 15px;
+        padding: 10px 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group:last-child {
+        margin-bottom: 0
+    }
+
+    .signUp-image {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .signin-form {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .signin-image {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    .signUp-image-link {
+        font-size: 12px;
+    }
+
+    .form-title {
+        margin-bottom: 20px
+    }
+
+
 }

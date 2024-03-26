@@ -145,20 +145,20 @@ div .mainPageTitle:after, div .mainPageTitle:before {
 
 
 
-form {
+.questions form {
     display: flex;
     flex-direction: column;
 }
 
-label {
+.questions label {
     font-size: 16px;
     color: #333;
     margin-bottom: 5px;
     vertical-align: middle;
 }
 
-input,
-textarea {
+.questions input,
+.questions textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -167,7 +167,7 @@ textarea {
     vertical-align: middle; 
 }
 
-input[type="submit"] {
+.questions input[type="submit"] {
     background-color: #6a929d;
     color: white;
     cursor: pointer;

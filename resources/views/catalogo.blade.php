@@ -16,7 +16,8 @@
             <input type="month" id="start" name="start" min="{{$nextMonth}}" placeholder="fecha de inicio">
             <label for="end">Fecha de salida: </label>
             <input type="month" id="end" name="end" placeholder="fecha de salida">
-            <input type="text" id="address" name="address" placeholder="Ciudad, calle o lugar">
+            <input type="text" id="address" name="address" placeholder="Calle, avenida,...">
+            <input type="text" id="city" name="city" placeholder="Ciudad">
             <input type="submit" value="Buscar">
         </form>
     </div>
