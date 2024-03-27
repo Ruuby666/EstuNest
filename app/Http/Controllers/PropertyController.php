@@ -44,7 +44,7 @@ class PropertyController extends Controller
 
     public function create(Request $request) {
 
-        try {
+        // try {
             $request->validate([
                 'address' => 'required',
                 'city' => 'required',
@@ -68,9 +68,9 @@ class PropertyController extends Controller
             $property -> save();
 
             return redirect()->route('catalog');
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-        }
+        // } catch (\Exception $e) {
+        //     dd($e->getMessage());
+        // }
     }
 
     public function edit($id){

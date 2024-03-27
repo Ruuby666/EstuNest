@@ -15,6 +15,11 @@
             <div class="form-group">
                 <input type="password" name="pass" id="pass" placeholder="Password">
             </div>
+            @if (session('errorMessage'))
+                <p class="errorInForm">
+                    {{ session('errorMessage') }}
+                </p>
+            @endif
             <div class="form-group form-button">
                 <input type="submit" name="signup" id="signup" class="form-submit" value="Log in">
             </div>

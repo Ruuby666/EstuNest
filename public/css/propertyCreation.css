@@ -156,6 +156,10 @@ input:hover {
     
 }
 
+.errorInForm {
+    color: red;
+}
+
 .userDetails > * {
     
     margin-bottom: 40px;

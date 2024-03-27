@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     h2.addEventListener('click', function () {
         if (container.style.height === '150px') {
-            container.style.height = '650px';
+            container.style.height = '750px';
             if (form.style.height === '450px') {
                 form.style.height = '170px';
             }
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     h2Form.addEventListener('click', function () {
         if (form.style.height === '170px') {
             form.style.height = '450px';
-            if (container.style.height === '650px') {
+            if (container.style.height === '750px') {
                 container.style.height = '150px';
             }
         }

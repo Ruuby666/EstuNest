@@ -25,7 +25,6 @@ class LoginController extends Controller
 
         // Verificar si el usuario existe y si la contraseña coincide
         if ($user && \Illuminate\Support\Facades\Hash::check($password, $user->password)) {
-            //if (\Illuminate\Support\Facades\Hash::check('password', $user->password)) {
                 Cookie::queue('user_dni', $user->dni, 60);
                 Cookie::queue('user_name', $user->name, 60);
                 Cookie::queue('user_surname', $user->surname, 60);
@@ -44,7 +43,8 @@ class LoginController extends Controller
         } else {
             // Autenticación fallida
             // Vuelve al formulario de inicio de sesión con un mensaje de error
-            return redirect()->route('logIn');
+            $errorMessage = 'Usuario o contraseña incorrectos';
+            return redirect()->route('logIn')->with('errorMessage', $errorMessage);
         }
     }
 
