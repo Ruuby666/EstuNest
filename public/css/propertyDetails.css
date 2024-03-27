@@ -38,10 +38,12 @@ input{
 #productImages {
     display: flex;
     margin: 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainImage {
-    width: 55%;
+    width: 50%;
     height: auto;
     margin-bottom: 10px;
     border: 1px solid rgba(169, 169, 169, 0.208);

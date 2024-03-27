@@ -48,7 +48,6 @@ class PropertyController extends Controller
             $request->validate([
                 'address' => 'required',
                 'city' => 'required',
-                'rooms' => 'required',
                 'description' => 'required',
                 'price' => 'required',
                 'property-image' => 'required|file|mimes:jpeg,png,jpg,gif,svg',
@@ -58,7 +57,6 @@ class PropertyController extends Controller
             $request->file('property-image')->move(public_path('img/properties'), $imageName);
 
             $property = new Property();
-            $property -> rooms_available = $request->input('rooms');
             $property -> description = $request->input('description');
             $property -> price = $request->input('price');
             $property -> city = $request->input('city');
@@ -92,12 +90,10 @@ class PropertyController extends Controller
             $request->validate([
                 'address' => 'required',
                 'city' => 'required',
-                'rooms' => 'required',
                 'description' => 'required',
                 'price' => 'required',
             ]);
 
-            $property -> rooms_available = $request->input('rooms');
             $property -> description = $request->input('description');
             $property -> price = $request->input('price');
             $property -> city = $request->input('city');

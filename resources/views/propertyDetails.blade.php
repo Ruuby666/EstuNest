@@ -11,14 +11,11 @@
                 <h2>{{ $property[0]->address }}</h2>
             </div>
             <div id="productImages">
-                <img class="mainImage" src="/img/logo.png" alt="Main Image" />
-                <div class="smallImages">
+                <img class="mainImage" src="/img/properties/{{$property[0]->images}}" alt="Main Image" />
+                {{-- <div class="smallImages">
                     <img src="/img/logo.png" alt="Small Image 1" />
                     <img src="/img/logo.png" alt="Small Image 2" />
-                </div>
-            </div>
-            <div id="moreImages">
-                <a href="#">+ Ver más imágenes</a>
+                </div> --}}
             </div>
         </div>
         <div class="rightPart">
@@ -79,9 +76,3 @@
 
     </div>
 @endsection
-
-
-{{-- 
-                            
-    
-    --}}

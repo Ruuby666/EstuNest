@@ -21,10 +21,6 @@
                             value="{{ $property[0]->city }}" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="rooms" id="rooms" placeholder="Habitaciones Disponibles"
-                            value="{{ $property[0]->rooms_available }}" required>
-                    </div>
-                    <div class="form-group">
                         <input type="text" name="description" id="description" placeholder="Descripción"
                             value="{{ $property[0]->description }}" required>
                     </div>

@@ -17,12 +17,6 @@
                 @enderror
             </div>
             <div class="form-group">
-                <input type="text" name="rooms" id="rooms" placeholder="Habitaciones Disponibles" required>
-                @error('rooms')
-                    <small class="errorInForm">{{ $message }}</small>
-                @enderror
-            </div>
-            <div class="form-group">
                 <input type="text" name="description" id="description" placeholder="Descripción" required>
                 @error('description')
                     <small class="errorInForm">{{ $message }}</small>

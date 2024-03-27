@@ -10,7 +10,6 @@ class Property extends Model
     use HasFactory;
 
     protected $fillable = [
-        'rooms_available',
         'description',
         'price',
         'city',
