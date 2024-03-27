@@ -30,7 +30,7 @@
                                 <td>{{ $property->city }}</td>
                                 <td>{{ $property->price }}€</td>
                                 <td>
-                                    <form action="" method="GET" style="display: inline;">
+                                    <form action="{{ route('property.edit', ['id' => $property->id]) }}" method="GET" style="display: inline;">
                                         @csrf
                                         <button type="submit" id="edit">Editar</button>
                                     </form>

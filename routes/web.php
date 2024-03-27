@@ -54,8 +54,9 @@ Route::post('/createProperty', [PropertyController::class, 'create'])->name('pro
 
 Route::get('/userProperties', [UserController::class, 'viewMyProperties'])->name('userProperties');
 
+ Route::get('/userProperties/{id}/edit', [PropertyController::class, 'edit'])->name('property.edit');
 
-// Route::get('/userDetails/{id}/edit', 'PropertyController@edit')->name('property.edit');
+ Route::post('/userProperties/{id}/update', [PropertyController::class, 'update'])->name('property.update');
 
 Route::delete('/userProperties/{id}', [PropertyController::class, 'destroy'])->name('property.delete');
 
@@ -71,4 +72,6 @@ Route::get('/documents', [DocumentController::class, 'viewDocuments'])->name('ma
 Route::post('/documents/{id}/accept', [DocumentController::class, 'acceptDocument'])->name('document.accept');
 
 Route::post('/documents/{id}/deny', [DocumentController::class, 'denyDocument'])->name('document.deny');
+
+
 
