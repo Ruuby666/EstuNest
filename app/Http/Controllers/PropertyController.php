@@ -88,11 +88,14 @@ class PropertyController extends Controller
 
             //Validate the data
             $request->validate([
-                'address' => 'required',
-                'city' => 'required',
-                'description' => 'required',
-                'price' => 'required',
+                'property-image' => 'file|mimes:jpeg,png,jpg,gif,svg',
             ]);
+
+            if($request->hasFile('property-image')){
+                $imageName = time().'.'.$request->file('property-image')->extension();
+                $request->file('property-image')->move(public_path('img/properties'), $imageName);
+                $property -> images = $imageName;
+            }
 
             $property -> description = $request->input('description');
             $property -> price = $request->input('price');

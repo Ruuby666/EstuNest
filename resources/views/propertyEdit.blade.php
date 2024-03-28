@@ -29,8 +29,7 @@
                             value="{{ $property[0]->price }}" required>
                     </div>
                     <div class="form-group">
-                        <input type="file" name="property-image" id="property-image" value="{{ $property[0]->images }}"
-                            required>
+                        <input type="file" name="property-image" id="property-image" required>
                     </div>
                     <div class="form-group form-button">
                         <input type="submit" name="update" id="update" class="form-submit" value="Update">
