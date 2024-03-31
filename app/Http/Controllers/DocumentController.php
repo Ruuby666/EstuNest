@@ -63,6 +63,9 @@ class DocumentController extends Controller
         // Eliminar el registro de la base de datos
         $document->delete();
 
+        //elimina el documento de la carpeta img/documents
+        unlink(public_path('img/documents/' . $document->image));
+
         // Redirige de vuelta a la lista de documentos
         return redirect()->route('mainAdmin');
 
