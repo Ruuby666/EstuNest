@@ -38,11 +38,11 @@ Para la realización de este proyecto tenemos que cumplir con los siguientes req
 
 ## Enlaces adicionales
 
-- **Diseños**: [Figma](https://www.figma.com/file/dp6CoKRt7OVyyPrh1h4869/Figma-basics?type=design&node-id=1669-162202&mode=design&t=vdvgSgmUdwQEKZFv-0)
+- **Diseños**: https://www.figma.com/file/dp6CoKRt7OVyyPrh1h4869/Figma-basics?type=design&node-id=1669-162202&mode=design&t=vdvgSgmUdwQEKZFv-0
   
-- **Diagrama de casos de uso**: [Google Drive](https://drive.google.com/file/d/1sXm-ncOghtJarxByy21bjZ-M93_QpyM0/view?usp=drive_link)
+- **Diagrama de casos de uso**: https://drive.google.com/file/d/1sXm-ncOghtJarxByy21bjZ-M93_QpyM0/view?usp=drive_link
   
-- **Diagrama de clases**: [Google Drive](https://drive.google.com/file/d/1QbhOcZJgX13KcR7sbK_OKu-rQ4ciH_mM/view?usp=drive_link)
+- **Diagrama de clases**: https://drive.google.com/file/d/1QbhOcZJgX13KcR7sbK_OKu-rQ4ciH_mM/view?usp=drive_link
 
 ---
 
