@@ -1,3 +1,7 @@
+i {
+    font-size: 20px;
+}
+
 img {
     max-width: 100%;
     height: auto
@@ -153,7 +157,7 @@ input:hover {
     margin: 50px;
     box-shadow: 12px 12px 4px 0px rgba(0,0,0,0.1);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+
 }
 
 .errorInForm {
@@ -161,7 +165,7 @@ input:hover {
 }
 
 .userDetails > * {
-    
+
     margin-bottom: 40px;
 }
 
@@ -180,11 +184,11 @@ input:hover {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 170px;
     overflow: hidden;
-    
+
 }
 
 #uploadDocumentContainer {
-    
+
     transition: height 0.5s ease;
 }
 

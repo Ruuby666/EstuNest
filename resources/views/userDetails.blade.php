@@ -21,7 +21,7 @@
                 <p>{{$phone}}</p><br>
 
                 <p><strong>Verificado como Estudiante: </strong>
-                    @if($type === 'both')
+                    @if($type == 'both')
                         <i class="fas fa-check-circle"></i>
                     @else
                         <i class="fas fa-times-circle"></i>
@@ -42,6 +42,7 @@
 
         </div>
 
+        @if($type !== 'both')
         <div class="uploadDocument" id="uploadDocumentContainer">
             <h2 id="uploadDocumentTitle">¿Eres estudiante? Sube tu documento de autentificación aqui <i class="fas fa-sort-down"></i></h2>
 
@@ -55,6 +56,7 @@
 
             <small>Si al cabo de 5 dias laborales no hay cambios en su Verificado, significa que no ha sido aceptada.</small>
         </div>
+        @endif
 
     </div>
 
