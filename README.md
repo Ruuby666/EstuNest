@@ -43,7 +43,3 @@ Para la realización de este proyecto tenemos que cumplir con los siguientes req
 - **Diagrama de casos de uso**: https://drive.google.com/file/d/1sXm-ncOghtJarxByy21bjZ-M93_QpyM0/view?usp=drive_link
   
 - **Diagrama de clases**: https://drive.google.com/file/d/1QbhOcZJgX13KcR7sbK_OKu-rQ4ciH_mM/view?usp=drive_link
-
----
-
-Este README estará enlazado en el proyecto junto con los enlaces proporcionados.
