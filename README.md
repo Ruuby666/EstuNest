@@ -1,6 +1,6 @@
 # EstuNest
 
-![logo](https://static.vecteezy.com/system/resources/previews/007/492/188/non_2x/nest-illustration-with-house-and-leaf-birdhouse-symbol-logo-vector.jpg)
+![logo](https://drive.google.com/file/d/1Pn_SlNpky8t5hlLjsuq5vhbi82RIiL8f/view?usp=drive_link)
 
 ## Introducción
 
