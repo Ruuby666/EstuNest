@@ -74,4 +74,5 @@ Route::post('/documents/{id}/accept', [DocumentController::class, 'acceptDocumen
 Route::post('/documents/{id}/deny', [DocumentController::class, 'denyDocument'])->name('document.deny');
 
 
-
+Route::get('/viewAllProperties', [PropertyController::class, 'viewAllProperties'])->name('viewAllProperties');
+Route::post('/viewAllProperties/{id}', [PropertyController::class, 'adminDeleteProperty'])->name('admin.property.delete');

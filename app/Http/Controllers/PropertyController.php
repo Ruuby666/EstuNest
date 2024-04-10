@@ -109,4 +109,20 @@ class PropertyController extends Controller
             dd($e->getMessage());
         }
     }
+
+
+    public function viewAllProperties(Request $request){
+        $properties = Property::all();
+        return view('viewAllProperties', ['properties' => $properties]);
+    }
+
+    public function adminDeleteProperty($id)
+    {
+        DB::delete('delete from properties where id = ?', [$id]);
+        return redirect()->route('viewAllProperties');
+    }
+
 }
+
+
+

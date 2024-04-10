@@ -1,5 +1,7 @@
 # EstuNest
 
+![logo](https://drive.google.com/file/d/1Pn_SlNpky8t5hlLjsuq5vhbi82RIiL8f/view?usp=drive_link)
+
 ## Introducción
 
 En la actualidad, muchos estudiantes se trasladan fuera de sus ciudades e incluso de sus países, lo que genera un creciente problema: la dificultad para encontrar viviendas decentes y asequibles. Como respuesta a esta problemática surge EstuNest, una plataforma digital diseñada para ayudar a los estudiantes a encontrar el alojamiento perfecto durante su etapa de estudios. EstuNest se ha creado específicamente para simplificar el proceso de alquiler de viviendas para estudiantes, ofreciendo seguridad y eficiencia en cada paso del camino.

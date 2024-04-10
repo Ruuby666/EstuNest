@@ -49,7 +49,8 @@
                 <div id="menu">
                     @if(Cookie::has('user_type') && Cookie::get('user_type') === 'admin')
                         <span id="adminTitle">Modo Administrador</span>
-                        <a href="{{ route('logout') }}" id="logOutButton"><span>Log Out</span></a>
+                        <a href="{{ route('viewAllProperties') }}" class="adminButtons"><span>View Properties</span></a>
+                        <a href="{{ route('logout') }}" class="adminButtons"><span>Log Out</span></a>
                     @else
                         <a href="{{ route('catalog') }}"><span>Catálogo</span></a>
                         <a href="{{ route('aboutUs') }}"><span>Sobre Nosotros</span></a>
