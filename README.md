@@ -1,6 +1,6 @@
 # EstuNest
 
-![logo](https://drive.google.com/file/d/1Pn_SlNpky8t5hlLjsuq5vhbi82RIiL8f/view?usp=drive_link)
+![logo](https://drive.google.com/uc?export=view&id=1Pn_SlNpky8t5hlLjsuq5vhbi82RIiL8f)
 
 ## Introducción
 
