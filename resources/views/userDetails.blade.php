@@ -7,12 +7,30 @@
 @section('content')
 
     <div class="userContainer">
+
+        @if (session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
         <div class="userDetails">
             <h2 class="userDetails-title">Detalles de Usuario</h2>
             <div class="userDetails-info">
-                <div class="profilePicture">
-                    <img src="{{ asset('img/profilePic.png') }}" alt="profile picture">
-                </div>
+                <form action="{{ route('userDetails.changeProfilePic') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <div class="profilePicture">
+                        <label for="profilePictureInput">
+                            @if($profile_picture)
+                                <img src="img/profile_pictures/{{$profile_picture}}" alt="profile picture">
+                            @else
+                                <img src="img/profilePic.png" alt="profile picture">
+                            @endif
+                        </label>
+                        <input type="file" id="profilePictureInput" name="profilePictureInput" style="display: none">
+                    </div>
+                    <input type='submit' id="updateProfilePictureButton" name="updateProfilePictureButton" value='actualizar foto'>
+                </form>
+                <br>
                 <p><strong>Nombre:</strong></p>
                 <p>{{ $name }} {{ $surname}}</p><br>
                 <p><strong>Correo Electrónico:</strong></p>
@@ -32,7 +50,6 @@
             </div>
         </div>
     </div>
-
 
     <div id='dropdowns'>
         <div class="propertyCreation" id="propertyCreationContainer">

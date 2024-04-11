@@ -49,6 +49,8 @@ Route::get('/userDetails', [UserController::class, 'details'])->name('userDetail
 
 Route::post('/userDetails', [DocumentController::class, 'uploadDocument'])->name('userDetails.uploadDocument');
 
+Route::post('/userDetails/update', [UserController::class, 'changeProfilePic'])->name('userDetails.changeProfilePic');
+
 
 Route::post('/createProperty', [PropertyController::class, 'create'])->name('property.create');
 

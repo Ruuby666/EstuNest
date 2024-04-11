@@ -16,6 +16,7 @@ class User extends Model
         'email',
         'password',
         'phone',
+        'profile_picture',
         'type',
     ];
 

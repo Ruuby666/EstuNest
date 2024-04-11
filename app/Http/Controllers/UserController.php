@@ -45,13 +45,15 @@ class UserController extends Controller
 
     public function details()
     {
+        $dni = Cookie::get('user_dni');
         $name = Cookie::get('user_name');
         $surname = Cookie::get('user_surname');
         $email = Cookie::get('user_email');
         $phone = Cookie::get('user_phone');
+        $profile_picture = User::where('dni', $dni)->first()->profile_picture;
         $type = Cookie::get('user_type');
 
-        return view('userDetails', ['name' => $name, 'surname' => $surname, 'email' => $email, 'phone' => $phone, 'type' => $type]);
+        return view('userDetails', ['name' => $name, 'surname' => $surname, 'email' => $email, 'phone' => $phone, 'profile_picture' => $profile_picture , 'type' => $type]);
     }
 
     public function viewMyProperties()
@@ -61,5 +63,21 @@ class UserController extends Controller
         return view('userProperties', ['properties' => $properties]);
     }
 
+    public function changeProfilePic(Request $request)
+    {
+        $request->validate([
+            'profilePictureInput' => 'required|file|mimes:jpeg,png,jpg,gif,svg',
+        ]);
     
+        $dni = Cookie::get('user_dni');
+        $user = User::where('dni', $dni)->first();
+
+        $imageName = $dni.'.'.$request->file('profilePictureInput')->extension();
+        $request->file('profilePictureInput')->move(public_path('img/profile_pictures'), $imageName);
+    
+        $user->profile_picture = $imageName;
+        $user->save();
+    
+        return redirect()->route('mainPage');
+    }
 }

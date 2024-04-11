@@ -30,6 +30,7 @@ class LoginController extends Controller
                 Cookie::queue('user_surname', $user->surname, 60);
                 Cookie::queue('user_phone', $user->phone, 60);
                 Cookie::queue('user_email', $user->email, 60);
+                Cookie::queue('user_profile_pic', $user->profile_picture, 60);
                 Cookie::queue('user_type', $user->type, 60);
            // }
             // Autenticación exitosa
@@ -56,6 +57,7 @@ class LoginController extends Controller
         Cookie::queue(Cookie::forget('user_surname'));
         Cookie::queue(Cookie::forget('user_phone'));
         Cookie::queue(Cookie::forget('user_email'));
+        Cookie::queue(Cookie::forget('user_profile_pic'));
         Cookie::queue(Cookie::forget('user_type'));
 
 
