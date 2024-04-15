@@ -21,7 +21,6 @@ class PropertyFactory extends Factory
         $landlord = User::where('type', 'landlord')->inRandomOrder()->first();
 
         return [
-            'rooms_available' => $this->faker->numberBetween(1, 10),
             'description' => $this->faker->paragraph,
             'price' => $this->faker->numberBetween(10000, 1000000),
             'city' => $this->faker->city,
