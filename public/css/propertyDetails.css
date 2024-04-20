@@ -129,27 +129,19 @@ label {
     border-radius: 4px;
     margin-top: auto;
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* Smooth transition for color changes */
 
-    /* Optional: Hover styles */
     &:hover {
         background-color: #b1d2db;
-        /* Darker color on hover */
         color: #293E44;
     }
 
-    /* Optional: Active (clicked) styles */
     &:active {
         background-color: #b1d2db;
-        /* Darker color when clicked */
         color: #293E44;
     }
 
-    /* Optional: Focus styles */
     &:focus {
         outline: none;
-        /* Remove default focus outline */
         box-shadow: 0 0 0 3px #b1d2db;
-        /* Add a subtle focus border */
     }
 }

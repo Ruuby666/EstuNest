@@ -9,21 +9,24 @@ use Illuminate\Support\Facades\Cookie;
 
 class LoginController extends Controller
 {
+    /**
+     * Shows the login form view
+     */
     public function showLoginForm()
     {
         return view('logIn');
     }
 
+    /**
+     * Validates the login form and logs the user in
+     */
     public function login(Request $request)
     {
-        // Obtener el email y la contraseña del formulario
         $email = $request->input('email');
         $password = $request->input('pass');
 
-        // Buscar al usuario por su email
         $user = User::where('email', $email)->first();
 
-        // Verificar si el usuario existe y si la contraseña coincide
         if ($user && \Illuminate\Support\Facades\Hash::check($password, $user->password)) {
                 Cookie::queue('user_dni', $user->dni, 60);
                 Cookie::queue('user_name', $user->name, 60);
@@ -32,23 +35,23 @@ class LoginController extends Controller
                 Cookie::queue('user_email', $user->email, 60);
                 Cookie::queue('user_profile_pic', $user->profile_picture, 60);
                 Cookie::queue('user_type', $user->type, 60);
-           // }
-            // Autenticación exitosa
-            // Aquí puedes realizar alguna acción, como redirigir al usuario a otra página
-            if($user->type == 'admin'){
+
+            if($user->type == 'admin') {
                 return redirect()->route('mainAdmin');
-            }else{
+            }
+            else{
                 return redirect()->route('mainPage');
             }
 
         } else {
-            // Autenticación fallida
-            // Vuelve al formulario de inicio de sesión con un mensaje de error
             $errorMessage = 'Usuario o contraseña incorrectos';
             return redirect()->route('logIn')->with('errorMessage', $errorMessage);
         }
     }
 
+    /**
+     * Logs the user out and redirects to the home page
+     */
     public function logout(Request $request)
     {
 

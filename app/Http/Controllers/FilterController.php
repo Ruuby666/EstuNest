@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class FilterController extends Controller
 {
+
+    /**
+     * Filter the properties by city and dates and return the view with the filtered properties
+     */
     public function filter(Request $request)
     {
         $startDate = $request->start;

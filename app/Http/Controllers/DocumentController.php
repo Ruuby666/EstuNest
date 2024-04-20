@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Cookie;
 
 class DocumentController extends Controller
 {
-    public function index()
-    {
-    }
 
+    /**
+     * Gets the data from the form and saves the document in the database and the image in the img/documents folder
+     */
     public function uploadDocument(Request $request)
     {
 
@@ -31,42 +31,41 @@ class DocumentController extends Controller
         }
     }
 
+    /**
+     * Returns the view with the documents that are in the database
+     */
     public function viewDocuments()
     {
         $documents = DB::select('select * from documents');
         return view('mainAdmin', ['documents' => $documents]);
     }
 
+    /**
+     * Accepts the document, changes the user type to 'both' and deletes the document from the database
+     */
     public function acceptDocument($id)
     {
         $document = Document::where('id', $id)->first();
         $user = User::where('dni', $document->dni_user)->first();
 
         if ($user) {
-            // Cambia el tipo de usuario
             $user->type = 'both';
-
-            // Guarda los cambios en la base de datos
             $user->save();
-
-            // Eliminar el registro de la base de datos
             $document->delete();
         }
-        // Redirige de vuelta a la lista de documentos
+
         return redirect()->route('mainAdmin');
-
     }
-
+    
+    /**
+     * Denies the document and deletes it from the database
+     */
     public function denyDocument($id)
     {
         $document = Document::where('id', $id)->first();
-        // Eliminar el registro de la base de datos
         $document->delete();
-
-        //elimina el documento de la carpeta img/documents
         unlink(public_path('img/documents/' . $document->image));
 
-        // Redirige de vuelta a la lista de documentos
         return redirect()->route('mainAdmin');
 
     }

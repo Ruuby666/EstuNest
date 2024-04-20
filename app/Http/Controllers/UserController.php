@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Cookie;
 
 class UserController extends Controller
 {
+    /**
+     * Gets the data form the register form and creates a new user in the database
+     */
     public function register(Request $request)
     {
-        //Validar los datos del formulario
         $request->validate([
             'dni' => 'required|unique:users|string|min:8|regex:/^[xyz]?\d{8}[a-z]$/i',
             'name' => 'required|string|max:255|regex:/^[A-Z]+$/i',
@@ -25,8 +27,6 @@ class UserController extends Controller
             'pass.regex' => 'Como minimo, debe contener 1 mayúscula, 1 minúscula, 1 dígito, 1 carácter especial y un minimo de 8 caracteres.'
         ]);
 
-
-        // Crear un nuevo usuario
         $user = new User();
         $user ->dni = $request->input('dni');
         $user -> name = $request->input('name');
@@ -37,12 +37,12 @@ class UserController extends Controller
         $user -> type = 'landlord';
         $user -> save();
 
-        // Autenticar al usuario (opcional)
-        // auth()->login($user);
-        // Redirigir al usuario después del registro
         return redirect()->route('logIn');
     }
 
+    /**
+     * Returns the view with the user details
+     */
     public function details()
     {
         $dni = Cookie::get('user_dni');
@@ -56,6 +56,9 @@ class UserController extends Controller
         return view('userDetails', ['name' => $name, 'surname' => $surname, 'email' => $email, 'phone' => $phone, 'profile_picture' => $profile_picture , 'type' => $type]);
     }
 
+    /**
+     * Returns the view with the properties of the user
+     */
     public function viewMyProperties()
     {
         $user = Cookie::get('user_dni');
@@ -63,6 +66,9 @@ class UserController extends Controller
         return view('userProperties', ['properties' => $properties]);
     }
 
+    /**
+     * Changes the profile picture of the user and saves the image in the img/profile_pictures folder, then redirects to the main page
+     */
     public function changeProfilePic(Request $request)
     {
         $request->validate([

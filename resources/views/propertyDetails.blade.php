@@ -12,10 +12,6 @@
             </div>
             <div id="productImages">
                 <img class="mainImage" src="/img/properties/{{$property[0]->images}}" alt="Main Image" />
-                {{-- <div class="smallImages">
-                    <img src="/img/logo.png" alt="Small Image 1" />
-                    <img src="/img/logo.png" alt="Small Image 2" />
-                </div> --}}
             </div>
         </div>
         <div class="rightPart">
