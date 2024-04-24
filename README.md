@@ -87,6 +87,12 @@ DB_USERNAME=laravel
 DB_PASSWORD=password
 ```
 
+Si no tienes el archivo .env, puedes copiar la estructura del siguiente enlace:
+
+https://github.com/platformsh-templates/laravel/blob/master/.env.example
+
+Una vez copiado, ya puedes poner los valores anteriores.
+
 ### Instalación
 
 1. Clonar el repositoro: `https://github.com/Ruuby666/EstuNest.git`
@@ -99,10 +105,18 @@ DB_PASSWORD=password
     ```
         npm run dev
     ```
-4. Ejecutamos el servidor
+4. Actualizamos el composer
+    ```
+        composer update
+    ```
+
+5. Ejecutamos el servidor
    ```
        php artisan serve
    ```
+
+Seguramente al abrir el navegador te dirá que no hay ninguna APP_KEY, sin embargo, Laravel, te proporciona un botón que te la genera automáticamente
+
    
 
 

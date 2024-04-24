@@ -11,10 +11,11 @@
     <div class="aboutUs">
         <div id="aboutUsText">
             <p>
-                EstuNest es una plataforma que busca ayudar a los estudiantes a encontrar alojamiento cerca de su universidad. 
-                Nuestro objetivo es facilitar la búsqueda de alojamiento a los estudiantes, ofreciendo una plataforma donde puedan 
-                encontrar alojamiento cerca de su universidad, y a su vez, ofrecer una plataforma a los propietarios de alojamiento 
-                para que puedan publicar sus alojamientos y encontrar estudiantes que estén interesados en alquilarlos.
+                EstuNest es una plataforma digital diseñada para ayudar a los estudiantes a encontrar el alojamiento perfecto durante su etapa de estudios.
+                Nuestra misión es simplificar la búsqueda de vivienda, ofreciendo una experiencia segura y eficiente. Además, proporcionamos a los 
+                propietarios una plataforma para publicar sus propiedades, brindándoles la oportunidad de llegar a un público específicamente interesado 
+                en la proximidad a centros educativos. En resumen, EstuNest facilita la interacción entre estudiantes y propietarios, creando un ambiente 
+                propicio para una comunidad estudiantil más conectada y respaldada.
             </p>
         </div>
         <div id="aboutUsImage">
