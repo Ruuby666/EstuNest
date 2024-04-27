@@ -41,6 +41,6 @@ class RentController extends Controller
 
         $rental->save();
 
-        return redirect()->route('mainPage');
+        return redirect()->route('mainPage')->with('success', 'La reserva se ha realizado correctamente');
     }
 }

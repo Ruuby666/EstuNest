@@ -46,6 +46,8 @@ Para la realización de este proyecto tenemos que cumplir con los siguientes req
   
 - **Diagrama de clases**: https://drive.google.com/file/d/1QbhOcZJgX13KcR7sbK_OKu-rQ4ciH_mM/view?usp=drive_link
 
+- **Video del proyecto**: https://youtu.be/njXlOYNXgBg
+
 ## Configuración
 
 ### Prerequisitos

@@ -1,12 +1,25 @@
 
 <link rel="stylesheet" href="{{ asset('css/filter.css') }}">
 <link rel="stylesheet" href="{{ asset('css/mainPage.css') }}">
+<script src="{{ asset('js/modal.js')}}"></script>
 
 @extends('layouts.app')
 
 @section('title', 'EstuNest')
 
 @section('content')
+
+@if (session('success'))
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p class="success-message">
+                <i class="fa fa-check success-icon"></i> 
+                {{ session('success') }}
+            </p>
+        </div>
+    </div>
+@endif
 
 <div id='filter'>
     <form id='catalogFilter' action="{{ route('filter') }}" method="POST">
