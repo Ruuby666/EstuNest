@@ -41,10 +41,12 @@ Para la realización de este proyecto tenemos que cumplir con los siguientes req
 ## Enlaces adicionales
 
 - **Diseños**: https://www.figma.com/file/dp6CoKRt7OVyyPrh1h4869/Figma-basics?type=design&node-id=1669-162202&mode=design&t=vdvgSgmUdwQEKZFv-0
+
+- **Diagrama Entidad Relación**: https://drive.google.com/file/d/18rxh5Md66njD0u9odETmKrSMUqX81kCz/view?usp=sharing
   
 - **Diagrama de casos de uso**: https://drive.google.com/file/d/1sXm-ncOghtJarxByy21bjZ-M93_QpyM0/view?usp=drive_link
   
-- **Diagrama de clases**: https://drive.google.com/file/d/1QbhOcZJgX13KcR7sbK_OKu-rQ4ciH_mM/view?usp=drive_link
+- **Diagrama de clases**: https://drive.google.com/file/d/1TS-N-xvH7oXhTdjGFFzPSpqKHu0llXeK/view?usp=sharing
 
 - **Video del proyecto**: https://youtu.be/njXlOYNXgBg
 
@@ -119,7 +121,10 @@ Una vez copiado, ya puedes poner los valores anteriores.
 
 Seguramente al abrir el navegador te dirá que no hay ninguna APP_KEY, sin embargo, Laravel, te proporciona un botón que te la genera automáticamente
 
-   
 
+### Test
 
-
+Para ejecutar los test, ejecuta el siguiente comando en la terminal:
+  ```
+    php artisan test
+  ```
