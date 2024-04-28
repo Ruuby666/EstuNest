@@ -119,7 +119,7 @@ Una vez copiado, ya puedes poner los valores anteriores.
        php artisan serve
    ```
 
-Seguramente al abrir el navegador te dirá que no hay ninguna APP_KEY, sin embargo, Laravel, te proporciona un botón que te la genera automáticamente
+Seguramente al abrir el navegador te dirá que no hay ninguna APP_KEY, sin embargo Laravel, cuando muestra este mensaje, te proporciona un botón que te la genera automáticamente.
 
 
 ### Test
