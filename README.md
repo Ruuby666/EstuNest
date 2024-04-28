@@ -84,18 +84,14 @@ Es necesario configurar nuestra Base de Datos. Para ello has uso de este archivo
 
 https://drive.google.com/file/d/1AH7ywHYCojToMvmjVwTFJ1dntXaaHQWY/view?usp=sharing
 
-Además, debemos indicarla en nuestro archivo .env: 
+Además, debemos indicarla en nuestro archivo '.env': 
 ```sh
 DB_DATABASE=estuNest
 DB_USERNAME=laravel
 DB_PASSWORD=password
 ```
 
-Si no tienes el archivo .env, puedes copiar la estructura del siguiente enlace:
-
-https://github.com/platformsh-templates/laravel/blob/master/.env.example
-
-Una vez copiado, ya puedes poner los valores anteriores.
+En el repositorio encontraras un archivo '.env.example'. Simplemente cambia el nombre a '.env' e inserta el codigo anterior.
 
 ### Instalación
 
@@ -119,7 +115,7 @@ Una vez copiado, ya puedes poner los valores anteriores.
        php artisan serve
    ```
 
-Seguramente al abrir el navegador te dirá que no hay ninguna APP_KEY, sin embargo Laravel, cuando muestra este mensaje, te proporciona un botón que te la genera automáticamente.
+Seguramente al abrir el navegador te dirá que no hay ninguna APP_KEY. Sin embargo, Laravel cuando muestra este mensaje te proporciona un botón que te la genera automáticamente.
 
 
 ### Test
